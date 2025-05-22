@@ -1,0 +1,260 @@
+.MainHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    width: 1440;
+    height: 93;
+    top: -3277px;
+    left: 2734px;
+}
+.logo_header_scan {
+    width: 141;
+    height: 141;
+    top: -24px;
+    left: 60px;
+}
+.logo_scan {
+    display: flex;
+    align-items: center;
+}
+.logo_scan img {
+    max-height: 40px;
+}
+.header_item_list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 100px;
+    padding-left: 60px;
+    margin-bottom: 40px;
+    width: 236;
+    height: 17;
+    top: 38px;
+    left: 602px;
+}
+.header_item_list li {
+    margin-right: 20px;
+    padding: 5px 0;
+}
+.header_item_list__link {
+    font-size: 1rem;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+.header_item_list__link:hover {
+    color: #5970FF;
+}
+.header_item_list__link--active {
+    color: #5970FF;
+    font-weight: 600;
+}
+.header_item_list__link--active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #5970FF;
+}
+.header_item_list__faq {
+    width: 27;
+    height: 17;
+    top: 38px;
+    left: 811px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 1%;
+}
+.header_item_list__tax {
+    width: 54;
+    height: 17;
+    top: 38px;
+    left: 708px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 1%;
+}
+.header_item_list__main {
+    width: 57;
+    height: 17;
+    top: 38px;
+    left: 602px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 1%;
+}
+.auth-section {
+    display: flex;
+    align-items: center;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.user-info span {
+    font-weight: 500;
+    color: #333;
+}
+.user-greeting {
+    display: block;
+    color: #333;
+    font-weight: 500;
+}
+.user-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+.button-class {
+    padding: 0.5rem 1rem;
+    color: #5970FF;
+    background-color: transparent;
+    border: 1px solid #5970FF;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.button-class:hover {
+    background-color: #5970FF;
+    color: white;
+}
+.active-button {
+    background-color: #5970FF;
+    color: white;
+}
+.logout-button {
+    background-color: transparent;
+    color: #FF5252;
+    border-color: #FF5252;
+}
+.logout-button:hover {
+    background-color: #FF5252;
+    color: white;
+}
+.search-link {
+    text-decoration: none;
+}
+.btn-login {
+    text-decoration: none;
+}
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.mobile-menu-toggle span {
+    display: block;
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #5970FF;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.mobile-menu-toggle span::before,
+.mobile-menu-toggle span::after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 0.25rem;
+    background-color: #5970FF;
+    transition: all 0.3s ease;
+}
+.mobile-menu-toggle span::before {
+    transform: translateY(-0.5rem);
+}
+.mobile-menu-toggle span::after {
+    transform: translateY(0.5rem);
+}
+.mobile-menu-toggle span.active {
+    background: transparent;
+}
+.mobile-menu-toggle span.active::before {
+    transform: rotate(45deg);
+}
+.mobile-menu-toggle span.active::after {
+    transform: rotate(-45deg);
+}
+@media screen and (max-width: 1024px) {
+    .MainHeader {
+        padding: 1rem;
+    }
+    .user-greeting {
+        font-size: 0.9rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    .header-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        z-index: 100;
+        transition: left 0.3s ease;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 5rem;
+    }
+    .header-menu.mobile-open {
+        left: 0;
+    }
+    .header_item_list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .user-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .auth-section {
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    .MainHeader {
+        padding: 0.8rem;
+    }
+    .user-greeting {
+        display: none;
+    }
+    .button-class {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    .logo_scan img {
+        max-height: 30px;
+    }
+}

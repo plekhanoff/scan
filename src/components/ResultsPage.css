@@ -1,0 +1,188 @@
+.results-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+}
+
+.find_soon, .spend_time, .target {
+  margin: 10px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-container, .histograms-container, .documents-container {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.summary-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.summary-info p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Стили для гистограмм */
+.histograms-container {
+  margin-top: 20px;
+}
+
+.histogram {
+  margin-bottom: 30px;
+}
+
+.histogram h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.histogram-bars {
+  display: flex;
+  align-items: flex-end;
+  height: 200px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  overflow-x: auto;
+}
+
+.histogram-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  min-width: 40px;
+}
+
+.bar {
+  width: 30px;
+  min-height: 1px;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.date {
+  font-size: 12px;
+  transform: rotate(-45deg);
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+.value {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Стили для списка документов */
+.results-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.result-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.result-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-item h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2a6496;
+}
+
+.result-item p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.result-item a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+.more_results {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-class {
+  padding: 10px 20px;
+  background-color: #5970ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.button-class:hover {
+  background-color: #4a5ad9;
+}
+
+/* Стили для состояний загрузки и ошибки */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  color: #666;
+}
+
+.error-message {
+  color: #d9534f;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  background-color: #f8d7da;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+ 
